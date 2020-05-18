@@ -18,12 +18,11 @@ about position level, and position name should also be given. Information about 
 available or not should also be stored in the database (this field will be either “yes” or “no”).
 
 ## Task: Design a new database to support this business
-Use SQL DDL and DML to provide the following deliverables that satisfy the requirements.
-1. Create tables:Create the five tables. Make sure you set up correct constraints for the primary keys and foreign keys. Also the following domain constrains are required in the creating:</br>
- 1). Set the default date as today for the value of InterviewDate.</br>
- 2). PositionLevel Type attribute in the Position table should only accept one of these five values -“Internship”, “Entry”, “Executive”, “Managerial”, “Staff”
+Use **SQL DDL** and **DML** to provide the following deliverables that satisfy the requirements.
+1. **Create tables**: Create the five tables. Make sure you set up correct **constraints for the primary keys** and **foreign keys**. Also the following domain constrains are required in the creating:</br>
+ 1). Set the **default date as today** for the value of InterviewDate.</br>
+ 2). PositionLevel Type attribute in the Position table should **only accept one of these five values** -“Internship”, “Entry”, “Executive”, “Managerial”, “Staff”
 
-2. Insert data: Insert the data to the tables. 
+2. **Insert data**: Insert the data to the tables. 
 
-3. Select data: Select all content of each table to prove the success of creating tables and inserting data. Include the
-screenshots of the select results in the lab report. 
+3. **Select data**: Select all content of each table to prove the success of creating tables and inserting data. 
