@@ -19,8 +19,8 @@ available or not should also be stored in the database (this field will be eithe
 
 ## Task: Design a new database to support this business
 Use SQL DDL and DML to provide the following deliverables that satisfy the requirements.
-1. Create tables:Create the five tables. Make sure you set up correct constraints for the primary keys and foreign keys. Also the following domain constrains are required in the creating:
- 1). Set the default date as today for the value of InterviewDate.
+1. Create tables:Create the five tables. Make sure you set up correct constraints for the primary keys and foreign keys. Also the following domain constrains are required in the creating:</br>
+ 1). Set the default date as today for the value of InterviewDate.</br>
  2). PositionLevel Type attribute in the Position table should only accept one of these five values -“Internship”, “Entry”, “Executive”, “Managerial”, “Staff”
 
 2. Insert data: Insert the data to the tables. 
