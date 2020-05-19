@@ -1,5 +1,5 @@
 Now, please write SQL statements to finish the following tasks:
-1. Views: create views based on the following requirements
+1. **Views: create views** based on the following requirements
 a) interviews_summary: for all the candidates, find their interviews and the
 corresponding interviewers. This view should show the candidate ID, candidate
 name, interview ID, interviewer ID, and interviewer name.<br/>
@@ -11,7 +11,7 @@ d) minimum_interviewer_prescription_summary: find the interviewer who had the
 lowest number of interviews.<br/>
 e) position_interview_summary: find the position for which the largest number of
 interviews were conducted.<br/>
-2. Create two transactions:<br/>
+2. **Create two transactions**:<br/>
 a) Create a new interview for a new candidate. New rows should be inserted into the
 tables Candidate, Interview, and Position.<br/>
 Step 1: create a new candidate record whose first name is “Shah”, last name is
@@ -22,7 +22,7 @@ interviewed on “2013-11-08 00:00:00.000” for his 1st round of interview for
 “Database Developer” position at Google. Position level is “Entry” and position is
 available. His interviewer was “Rose Barbara”.<br/>
 Step 2: display records from Candidate, Interview, and Position table.<br/>
-Step 3: ROLLBACK transaction.v
+Step 3: **ROLLBACK transaction**.v
 Step 4: display records from Candidate, Interview, and Position table.<br/>
 b) Add a new position for a company. New rows should be inserted into the tables
 Company, Position and Interview.<br/>
@@ -34,5 +34,5 @@ interviews were conducted for 3 candidates on “2013-11-01 00:00:00.000”. The
 candidates were “Sebastian Chapman”, “Lily Turner” and “Tin Chung”. Also the
 interviewer was “Shawn Micheal”<br/>
 Step 2: display records from Company, Position and Interview table.<br/>
-Step 3: COMMIT transaction.<br/>
+Step 3: **COMMIT transaction**.<br/>
 Step 4: display records from Company, Position and Interview table.<br/>
