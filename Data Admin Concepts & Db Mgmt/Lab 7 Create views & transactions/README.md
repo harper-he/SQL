@@ -1,7 +1,7 @@
 Now, please write SQL statements to finish the following tasks:
 1. **Views: create views** based on the following requirements<br/>
-    a). interviews_summary: for all the candidates, find their interviews and the corresponding interviewers. This view should show the candidate ID, candidate name, interview ID, interviewer ID, and interviewer name.<br/>
-    b). position_summary: find the total number of positions available for each company in the second half of 2013 (Jul, Aug, Sep, Oct, Nov, Dec).<br/>
+    a. interviews_summary: for all the candidates, find their interviews and the corresponding interviewers. This view should show the candidate ID, candidate name, interview ID, interviewer ID, and interviewer name.<br/>
+    b. position_summary: find the total number of positions available for each company in the second half of 2013 (Jul, Aug, Sep, Oct, Nov, Dec).<br/>
     c). maximum_candidate_interview_summary: find the candidate who had the largest number of interviews.<br/>
     d). minimum_interviewer_prescription_summary: find the interviewer who had the lowest number of interviews.<br/>
     e). position_interview_summary: find the position for which the largest number of interviews were conducted.<br/>
