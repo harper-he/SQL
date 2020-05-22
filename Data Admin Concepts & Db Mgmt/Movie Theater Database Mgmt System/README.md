@@ -1,1 +1,1 @@
-
+In this project, Movie Insider, a Movie Theater Database Management System is developed. Database is designed using MS Access, SQL Server and Visio. It is designed to manage the records about movie schedules, movie collections, ticket sales and so on. It provides user-friendly interface for entering, retrieving and managing records through tables, forms, queries and reports.
