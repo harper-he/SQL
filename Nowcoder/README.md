@@ -136,6 +136,18 @@ WHERE dept_emp.emp_no NOT IN
 (SELECT emp_no FROM dept_manager)
 AND salaries.to_date='9999-01-01'
 
+### MEDIUM
+* 查找员工编号emp_no为10001其自入职以来的薪水salary涨幅(总共涨了多少)growth(可能有多次涨薪，没有降薪)
+SELECT 
+(SELECT salary 
+FROM salaries 
+WHERE emp_no='10001' 
+AND to_date=(SELECT MAX(to_date) FROM salaries WHERE emp_no='10001'))-
+(SELECT salary 
+FROM salaries 
+WHERE emp_no='10001' 
+AND from_date=(SELECT MIN(from_date) FROM salaries WHERE emp_no='10001')) AS growth;
+
 * 获取员工其当前的薪水比其manager当前薪水还高的相关信息，当前表示to_date='9999-01-01',
 * 结果第一列给出员工的emp_no，
 * 第二列给出其manager的manager_no，
@@ -150,10 +162,9 @@ AND salaries.to_date='9999-01-01'
 
 * 对所有员工的当前(to_date='9999-01-01')薪水按照salary进行按照1-N的排名，相同salary并列且按照emp_no升序排列
 
-查找所有员工自入职以来的薪水涨幅情况，给出员工编号emp_no以及其对应的薪水涨幅growth，并按照growth进行升序
+* 查找所有员工自入职以来的薪水涨幅情况，给出员工编号emp_no以及其对应的薪水涨幅growth，并按照growth进行升序
 （注:可能有employees表和salaries表里存在记录的员工，有对应的员工编号和涨薪记录，但是已经离职了，离职的员工salaries表的最新的to_date!='9999-01-01'，这样的数据不显示在查找结果里面）
 
-查找员工编号emp_no为10001其自入职以来的薪水salary涨幅(总共涨了多少)growth(可能有多次涨薪，没有降薪)
 
 * 查找当前薪水(to_date='9999-01-01')排名第二多的员工编号emp_no、薪水salary、last_name以及first_name，你可以不使用order by完成吗
 
