@@ -216,7 +216,6 @@ WHERE to_date='9999-01-01') T2
 WHERE T1.emp_no=T2.emp_no 
 ORDER BY growth 
 
-
 * 查找当前薪水(to_date='9999-01-01')排名第二多的员工编号emp_no、薪水salary、last_name以及first_name，你可以不使用order by完成吗
 SELECT e.emp_no,s.salary,e.last_name, e.first_name 
 FROM employees e 
@@ -238,4 +237,11 @@ AND salaries.to_date='9999-01-01') T1
 GROUP BY title
 
 * 获取所有部门中当前(dept_emp.to_date = '9999-01-01')员工薪水最高的相关信息，给出dept_no, emp_no以及其对应的salary
-
+SELECT T.dept_no, T.emp_no, MAX(T.salary)
+FROM 
+(SELECT dept_emp.dept_no, dept_emp.emp_no, salaries.salary
+FROM dept_emp,salaries
+WHERE dept_emp.to_date = '9999-01-01'
+AND dept_emp.emp_no=salaries.emp_no) T
+GROUP BY T.dept_no
+ORDER BY T.dept_no
