@@ -228,6 +228,14 @@ WHERE salary < (SELECT MAX(salary) FROM salaries
 WHERE to_date='9999-01-01') AND to_date='9999-01-01') 
 
 * 统计出当前各个title类型对应的员工当前（to_date='9999-01-01'）薪水对应的平均工资。结果给出title以及平均工资avg。
+SELECT title, AVG(salary)
+FROM
+(SELECT titles.title, salaries.salary
+FROM titles,salaries
+WHERE titles.emp_no=salaries.emp_no
+AND titles.to_date='9999-01-01'
+AND salaries.to_date='9999-01-01') T1
+GROUP BY title
 
 * 获取所有部门中当前(dept_emp.to_date = '9999-01-01')员工薪水最高的相关信息，给出dept_no, emp_no以及其对应的salary
 
