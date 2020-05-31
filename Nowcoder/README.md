@@ -218,6 +218,14 @@ ORDER BY growth
 
 
 * 查找当前薪水(to_date='9999-01-01')排名第二多的员工编号emp_no、薪水salary、last_name以及first_name，你可以不使用order by完成吗
+SELECT e.emp_no,s.salary,e.last_name, e.first_name 
+FROM employees e 
+JOIN salaries s 
+ON e.emp_no=s.emp_no 
+WHERE s.salary= 
+(SELECT MAX(salary) FROM salaries 
+WHERE salary < (SELECT MAX(salary) FROM salaries 
+WHERE to_date='9999-01-01') AND to_date='9999-01-01') 
 
 * 统计出当前各个title类型对应的员工当前（to_date='9999-01-01'）薪水对应的平均工资。结果给出title以及平均工资avg。
 
