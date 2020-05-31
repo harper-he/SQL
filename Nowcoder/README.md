@@ -204,6 +204,17 @@ DENSE_RANK again gives you the ranking within your ordered partition, but the ra
 
 * 查找所有员工自入职以来的薪水涨幅情况，给出员工编号emp_no以及其对应的薪水涨幅growth，并按照growth进行升序
 （注:可能有employees表和salaries表里存在记录的员工，有对应的员工编号和涨薪记录，但是已经离职了，离职的员工salaries表的最新的to_date!='9999-01-01'，这样的数据不显示在查找结果里面）
+SELECT T2.emp_no, (T2.salary -T1.salary) AS growth 
+FROM 
+(SELECT salaries.emp_no, salary 
+FROM salaries, employees 
+WHERE salaries.emp_no=employees.emp_no 
+AND salaries.from_date=employees.hire_date) T1, 
+(SELECT emp_no, salary 
+FROM salaries 
+WHERE to_date='9999-01-01') T2 
+WHERE T1.emp_no=T2.emp_no 
+ORDER BY growth 
 
 
 * 查找当前薪水(to_date='9999-01-01')排名第二多的员工编号emp_no、薪水salary、last_name以及first_name，你可以不使用order by完成吗
