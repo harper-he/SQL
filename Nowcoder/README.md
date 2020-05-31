@@ -153,6 +153,20 @@ AND from_date=(SELECT MIN(from_date) FROM salaries WHERE emp_no='10001')) AS gro
 * 第二列给出其manager的manager_no，
 * 第三列给出该员工当前的薪水emp_salary,
 * 第四列给该员工对应的manager当前的薪水manager_salary
+SELECT sde.emp_no emp_no, sdm.emp_no manager_no, sde.salary emp_salary, sdm.salary AS manager_salary
+FROM 
+(SELECT s.emp_no, s.salary, de.dept_no 
+FROM salaries s
+INNER JOIN dept_emp de
+ON s.emp_no=de.emp_no
+WHERE s.to_date='9999-01-01') sde, 
+(SELECT s.emp_no, s.salary, dm.dept_no 
+FROM salaries s
+INNER JOIN dept_manager dm
+ON s.emp_no=dm.emp_no
+WHERE s.to_date='9999-01-01') sdm
+WHERE sde.dept_no =sdm.dept_no
+AND sde.salary > sdm.salary
 
 * 汇总各个部门当前员工的title类型的分配数目，即结果给出部门编号dept_no、dept_name、其部门下所有的当前(dept_emp.to_date = '9999-01-01')员工的当前(titles.to_date = '9999-01-01')title以及该类型title对应的数目count
 (注：因为员工可能有离职，所有dept_emp里面to_date不为'9999-01-01'就已经离职了，不计入统计，而且员工可能有晋升，所以如果titles.to_date 不为 '9999-01-01'，那么这个可能是员工之前的职位信息，也不计入统计)
