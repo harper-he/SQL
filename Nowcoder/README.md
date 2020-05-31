@@ -192,6 +192,11 @@ OR strftime("%Y",s2.from_date) - strftime("%Y",s1.from_date) =1)
 ORDER BY salary_growth DESC
 
 * 对所有员工的当前(to_date='9999-01-01')薪水按照salary进行按照1-N的排名，相同salary并列且按照emp_no升序排列
+SELECT emp_no, salary, 
+DENSE_RANK() OVER (ORDER BY salary DESC) rank 
+FROM salaries 
+WHERE to_date='9999-01-01'
+order by rank asc,emp_no asc
 
 * 查找所有员工自入职以来的薪水涨幅情况，给出员工编号emp_no以及其对应的薪水涨幅growth，并按照growth进行升序
 （注:可能有employees表和salaries表里存在记录的员工，有对应的员工编号和涨薪记录，但是已经离职了，离职的员工salaries表的最新的to_date!='9999-01-01'，这样的数据不显示在查找结果里面）
