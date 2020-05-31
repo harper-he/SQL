@@ -183,6 +183,13 @@ ORDER BY T1.dept_no
 
 * 给出每个员工每年薪水涨幅超过5000的员工编号emp_no、薪水变更开始日期from_date以及薪水涨幅值salary_growth，并按照salary_growth逆序排列。
 提示：在sqlite中获取datetime时间对应的年份函数为strftime('%Y', to_date)
+SELECT s2.emp_no, s2.from_date, (s2.salary-s1.salary) AS salary_growth
+FROM salaries s1, salaries s2
+WHERE s1.emp_no=s2.emp_no
+AND (s2.salary-s1.salary)>5000
+AND (strftime('%Y', s2.to_date)-strftime('%Y', s1.to_date)=1
+OR strftime("%Y",s2.from_date) - strftime("%Y",s1.from_date) =1)
+ORDER BY salary_growth DESC
 
 * 对所有员工的当前(to_date='9999-01-01')薪水按照salary进行按照1-N的排名，相同salary并列且按照emp_no升序排列
 
