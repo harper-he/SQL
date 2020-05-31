@@ -170,6 +170,16 @@ AND sde.salary > sdm.salary
 
 * 汇总各个部门当前员工的title类型的分配数目，即结果给出部门编号dept_no、dept_name、其部门下所有的当前(dept_emp.to_date = '9999-01-01')员工的当前(titles.to_date = '9999-01-01')title以及该类型title对应的数目count
 (注：因为员工可能有离职，所有dept_emp里面to_date不为'9999-01-01'就已经离职了，不计入统计，而且员工可能有晋升，所以如果titles.to_date 不为 '9999-01-01'，那么这个可能是员工之前的职位信息，也不计入统计)
+SELECT T1.dept_no, dept_name, T1.title, COUNT(T1.emp_no)
+FROM 
+(SELECT dept_emp.dept_no, dept_emp.emp_no, titles.title
+FROM dept_emp, titles
+WHERE dept_emp.emp_no=titles.emp_no
+AND dept_emp.to_date = '9999-01-01'
+AND titles.to_date = '9999-01-01') T1, departments
+WHERE T1.dept_no= departments.dept_no
+GROUP BY T1.title, T1.dept_no
+ORDER BY T1.dept_no
 
 * 给出每个员工每年薪水涨幅超过5000的员工编号emp_no、薪水变更开始日期from_date以及薪水涨幅值salary_growth，并按照salary_growth逆序排列。
 提示：在sqlite中获取datetime时间对应的年份函数为strftime('%Y', to_date)
