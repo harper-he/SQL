@@ -1,8 +1,6 @@
 SQL views and with clauses are very similar. Here are some differences.
 
->Views create an actual object in the database, with associated metadata and security capabilities. With statements are only part if a single query.
-
-In many databases, views have options, for instance to index them or to "instantiate" them.
+>Views create an actual object in the database, with associated metadata and security capabilities. With statements are only part if a single query.<br>In many databases, views have options, for instance to index them or to "instantiate" them.
 
 With statements offer the opportunity to have recursive CTEs, in some databases. This is not possible for views.
 
