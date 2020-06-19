@@ -1,3 +1,20 @@
+
+
+Unit Topic 
+01 Introductions / Welcome, Syllabus,SQL Refresher Course Materials Online
+02 Introduction to Data Warehousing 
+03 Data Warehouse Constructs and Components
+04 Project Management & Requirements Gathering 
+05 Introduction to Dimensional Modeling 
+06 Dimensional Modeling Design in SQL 
+07 Technical Architecture 
+08 Introduction to ETL Design 
+09 ETL Development with SSIS 
+10 Master Data Management & Data Governance / Introduction to Business Intelligence
+11 Business intelligence design and development
+12 Big Data In the Data Warehouse 
+
+
 ### Data Warehousing 
 This course introduces the concepts of **business intelligence (BI)** and the practice/techniques in building a BI solution. Students focus on how to use data warehouses as a BI solution to make better organizational decisions. Topics include concepts, principles and tools for **designing, and implementing data warehouses**. Students learn the differences between **Ralph Kimball’s** and **Bill Inmon’s approaches, roles and responsibilities** in the design and implementation of a data warehouse, **project management guidelines** and **techniques**, and **requirements gathering**. Coursework also covers **dimensional modeling**, **Extract Transform and Load (ETL) architecture**, **specification and data loading**, and **master and reference data management**, as well as **integration approaches (ETL, EII, EAI), analytical reporting concepts, data governance** and recent trends in the data warehouse domain.<br>
 
