@@ -7,9 +7,9 @@
 |03 | Data Warehouse Constructs and Components |
 |04 | Project Management & Requirements Gathering |
 |05 | Introduction to Dimensional Modeling | 
-|06 | Dimensional Modeling Design in SQL | * primary key of a dimension table & notable exception<br>  * why a natural or business key is necessary<br>  * primary key of the fact table |
+|06 | Dimensional Modeling Design in SQL | 1. primary key of a dimension table & notable exception<br>  2. why a natural or business key is necessary<br>  3. primary key of the fact table |
 |07 | Technical Architecture  |
-|08 | Introduction to ETL Design | * goals of an ETL solution<br>  * Redundant data in a ETL solution<br>  * Why ETL the most time-consuming in a DW/BI project? |
+|08 | Introduction to ETL Design | 1. goals of an ETL solution<br>  2. Redundant data in a ETL solution<br>  3. Why ETL the most time-consuming in a DW/BI project? |
 |09 | ETL Development with SSIS  |
 |10 | Master Data Management & Data Governance / Introduction to Business Intelligence |
 |11 | Business intelligence design and development |
