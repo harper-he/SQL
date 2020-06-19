@@ -1,6 +1,6 @@
 
 
-|Unit | Topic |---|
+|Unit | Topic | Questions |
 |---|---|---|
 |01 | Introductions / Welcome, Syllabus,SQL Refresher Course Materials Online |
 |02 | Introduction to Data Warehousing |
@@ -9,7 +9,7 @@
 |05 | Introduction to Dimensional Modeling | 
 |06 | Dimensional Modeling Design in SQL | 
 |07 | Technical Architecture  |
-|08 | Introduction to ETL Design  |
+|08 | Introduction to ETL Design | * goals of an ETL solution<br>  * Redundant data in a ETL solution<br>  * Why is ETL the most time-consuming step in a DW/BI project? |
 |09 | ETL Development with SSIS  |
 |10 | Master Data Management & Data Governance / Introduction to Business Intelligence |
 |11 | Business intelligence design and development |
