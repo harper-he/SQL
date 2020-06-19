@@ -1,18 +1,19 @@
 
 
-Unit Topic 
-01 Introductions / Welcome, Syllabus,SQL Refresher Course Materials Online
-02 Introduction to Data Warehousing 
-03 Data Warehouse Constructs and Components
-04 Project Management & Requirements Gathering 
-05 Introduction to Dimensional Modeling 
-06 Dimensional Modeling Design in SQL 
-07 Technical Architecture 
-08 Introduction to ETL Design 
-09 ETL Development with SSIS 
-10 Master Data Management & Data Governance / Introduction to Business Intelligence
-11 Business intelligence design and development
-12 Big Data In the Data Warehouse 
+|Unit | Topic |---|
+|---|---|---|
+|01 | Introductions / Welcome, Syllabus,SQL Refresher Course Materials Online |
+|02 | Introduction to Data Warehousing |
+|03 | Data Warehouse Constructs and Components |
+|04 | Project Management & Requirements Gathering |
+|05 | Introduction to Dimensional Modeling | 
+|06 | Dimensional Modeling Design in SQL | 
+|07 | Technical Architecture  |
+|08 | Introduction to ETL Design  |
+|09 | ETL Development with SSIS  |
+|10 | Master Data Management & Data Governance / Introduction to Business Intelligence |
+|11 | Business intelligence design and development |
+|12 | Big Data In the Data Warehouse  |
 
 
 ### Data Warehousing 
