@@ -7,3 +7,10 @@ SELECT CONCAT("There are a total of ",
   FROM OCCUPATIONS 
   GROUP BY Occupation
   ORDER BY COUNT(Occupation), Occupation;
+  
+ -- Binary Tree Nodes 
+  SELECT N, 
+  (CASE WHEN P IS NULL THEN "Root"
+   WHEN N IN (SELECT P FROM BST GROUP BY P HAVING COUNT(N)=2) THEN "Inner" 
+   ELSE "Leaf" END) AS Type
+   FROM BST ORDER BY N
