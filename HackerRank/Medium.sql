@@ -60,3 +60,10 @@ SELECT T2.hacker_id, H.name
       ON T2.hacker_id=H.hacker_id
       WHERE T2.num>1
 ORDER BY T2.num DESC, T2.hacker_id 
+
+-- Weather Observation Station 18                         
+SELECT ROUND((ABS(c-a)+ABS(d-b)),4) AS distance
+FROM 
+(SELECT MIN(LAT_N) AS a, MIN(LONG_W) AS b, 
+        MAX(LAT_N) AS c, MAX(LONG_W) AS d 
+FROM STATION) Tmp                         
