@@ -73,3 +73,13 @@ SELECT ROUND(SQRT(POWER((b-a),2)+POWER((d-c),2)),4) AS distance
   FROM (SELECT MIN(LAT_N) AS a, MAX(LAT_N) AS b, 
                 MIN(LONG_W) AS c, MAX(LONG_W) AS d  
           FROM STATION) Tmp
+
+-- Weather Observation Station 20
+-- SELECT ROUND(LAT_N,4) FROM
+-- (SELECT LAT_N, ROW_NUMBER() OVER(ORDER BY LAT_N) AS rn3
+-- FROM STATION 
+-- WHERE rn3=
+-- (SELECT (CASE WHEN MAX(rn)%2!=0 THEN MAX(rn)/2
+--                  ELSE FLOOR(MAX(rn)/2)+1 END ) AS rn2
+-- (SELECT LAT_N, ROW_NUMBER() OVER(ORDER BY LAT_N) AS rn FROM STATION) T1))T3
+-- -- WHERE ROW_NUMBER=(SELECT COUNT(1)/2+1 FROM STATION)
